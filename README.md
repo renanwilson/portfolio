@@ -15,7 +15,10 @@ Toda a estilização é feita com scss o sass.
 ## Available Scripts
 
 In the project directory, you can run:
-###`yarn install`
+
+### `yarn install`
+
+For install node_modules
 
 ### `yarn start`
 
