@@ -1,24 +1,27 @@
-import '@testing-library/jest-dom'
-import { render, screen,  RenderResult} from "@testing-library/react";
+import "@testing-library/jest-dom";
+import { render, screen, RenderResult } from "@testing-library/react";
 import { Card, CardProps } from "./Card";
 
-const defaultProps:  CardProps = {
-    TITLE: 'Titulo',
-    TEXT: 'Texto',
-    ICON: false,
-}
+const defaultProps: CardProps = {
+  TITLE: "Titulo",
+  TEXT: "Texto",
+  ICON: false,
+};
 
-const setup = (props?: CardProps): RenderResult => render(<Card {...{...defaultProps, ...props}} />)
+const container = (props?: CardProps): RenderResult =>
+  render(<Card {...{ ...defaultProps, ...props }} />);
 
-describe('Is render Card', () => {
-    it('Is render Title', () => {
-        setup()
+describe("Is render Card", () => {
+  it("Is render Title", () => {
+    container();
+    
+    const TITLE = screen.getByText(defaultProps.TITLE);
+    expect(TITLE).toBeInTheDocument();
+  });
+  it("Is render Text", () => {
+    container();
 
-        expect(screen.getByText(defaultProps.TITLE)).toBeInTheDocument()
-    })
-    it('Is render Text', () => {
-        setup()
-
-        expect(screen.getByText(defaultProps.TEXT)).toBeInTheDocument()
-    })
-})
+    const TEXT = screen.getByText(defaultProps.TEXT);
+    expect(TEXT).toBeInTheDocument();
+  });
+});

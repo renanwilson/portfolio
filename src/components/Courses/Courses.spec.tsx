@@ -25,31 +25,31 @@ jest.mock("react-icons/si", () => ({
   SiTypescript: jest.fn(() => null),
 }));
 
-const setup = () => render(<Courses />);
+const container = () => render(<Courses />);
 
 describe("Is render icons", () => {
   it("is render DiReact", () => {
-    setup();
+    container();
 
     expect(DiReact).toHaveBeenCalled();
   });
   it("is render AiFillHtml5", () => {
-    setup();
+    container();
 
     expect(AiFillHtml5).toHaveBeenCalled();
   });
   it("is render Sitypescript", () => {
-    setup();
+    container();
 
     expect(SiTypescript).toHaveBeenCalled();
   });
   it("is render IoLogoCss3", () => {
-    setup();
+    container();
 
     expect(IoLogoCss3).toHaveBeenCalled();
   });
   it("is render IoLogoJavaScript", () => {
-    setup();
+    container();
 
     expect(IoLogoJavascript).toHaveBeenCalled();
   });
@@ -57,62 +57,74 @@ describe("Is render icons", () => {
 
 describe("Is render Courses", () => {
   it("is render title", () => {
-    setup();
+    container();
 
-    expect(screen.getByText(COURSES_MESSAGES.TITLE)).toBeInTheDocument();
+    const TITLE = screen.getByText(COURSES_MESSAGES.TITLE)
+    expect(TITLE).toBeInTheDocument();
   });
 
   it("is render first title", () => {
-    setup();
+    container();
 
-    expect(screen.getByText(COURSES_MESSAGES.FIRST.TITLE)).toBeInTheDocument();
+    const FIRST_TITLE = screen.getByText(COURSES_MESSAGES.FIRST.TITLE)
+
+    expect(FIRST_TITLE).toBeInTheDocument();
   });
 
   it("Is render first text", () => {
-    setup();
+    container();
 
-    expect(screen.getByText(COURSES_MESSAGES.FIRST.TEXT)).toBeInTheDocument();
+    const FIRST_TEXT = screen.getByText(COURSES_MESSAGES.FIRST.TEXT)
+    expect(FIRST_TEXT).toBeInTheDocument();
   });
 
   it("Is render second title", () => {
-    setup();
+    container();
 
-    expect(screen.getByText(COURSES_MESSAGES.SECOND.TITLE)).toBeInTheDocument();
+    const SECOND_TITLE =  screen.getByText(COURSES_MESSAGES.SECOND.TITLE)
+    expect(SECOND_TITLE).toBeInTheDocument();
   });
   it("Is render second text", () => {
-    setup();
+    container();
 
-    expect(screen.getByText(COURSES_MESSAGES.SECOND.TEXT)).toBeInTheDocument();
+    const SECOND_TEXT =  screen.getByText(COURSES_MESSAGES.SECOND.TEXT)
+    expect(SECOND_TEXT).toBeInTheDocument();
   });
 
   it("is render thirt title", () => {
-    setup();
+    container();
 
-    expect(screen.getByText(COURSES_MESSAGES.THIRD.TITLE)).toBeInTheDocument();
+    const THIRD_TITLE = screen.getByText(COURSES_MESSAGES.THIRD.TITLE)
+    expect(THIRD_TITLE).toBeInTheDocument();
   });
   it("Is render third text", () => {
-    setup();
+    container();
 
-    expect(screen.getByText(COURSES_MESSAGES.THIRD.TEXT)).toBeInTheDocument();
+    const THIRD_TEXT = screen.getByText(COURSES_MESSAGES.THIRD.TEXT)
+    expect(THIRD_TEXT).toBeInTheDocument();
   });
   it("Is render fourth title", () => {
-    setup();
+    container();
 
-    expect(screen.getByText(COURSES_MESSAGES.FOURTH.TITLE)).toBeInTheDocument();
+    const FOURTH_TITLE = screen.getByText(COURSES_MESSAGES.FOURTH.TITLE)
+    expect(FOURTH_TITLE).toBeInTheDocument();
   });
   it("Is render fourth text", () => {
-    setup();
+    container();
 
-    expect(screen.getByText(COURSES_MESSAGES.FOURTH.TEXT)).toBeInTheDocument();
+    const FOURTH_TEXT = screen.getByText(COURSES_MESSAGES.FOURTH.TEXT)
+    expect(FOURTH_TEXT).toBeInTheDocument();
   });
   it("Is render fifth title", () => {
-    setup();
+    container();
 
-    expect(screen.getByText(COURSES_MESSAGES.FIFTH.TITLE)).toBeInTheDocument();
+    const FIFTH_TITLE = screen.getByText(COURSES_MESSAGES.FIFTH.TITLE)
+    expect(FIFTH_TITLE).toBeInTheDocument();
   });
   it("Is render fifth text", () => {
-    setup();
+    container();
 
-    expect(screen.getByText(COURSES_MESSAGES.FIFTH.TEXT)).toBeInTheDocument();
+    const FIFTH_TEXT =  screen.getByText(COURSES_MESSAGES.FIFTH.TEXT)
+    expect(FIFTH_TEXT).toBeInTheDocument();
   });
 });
