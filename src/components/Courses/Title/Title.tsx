@@ -1,7 +1,7 @@
 import React from "react";
 import './Title.style.scss'
 export type TitleProps = {
-    TITLE: any,
+    TITLE: string,
 }
 
 export function Title(props: TitleProps) {

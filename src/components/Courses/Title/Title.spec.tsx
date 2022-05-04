@@ -7,12 +7,13 @@ const defaultProps: TitleProps = {
     TITLE: 'Aqui é um titulo'
 }
 
-const setup = (props?: TitleProps): RenderResult => render(<Title {...{...defaultProps, ...props}} />)
+const container = (props?: TitleProps): RenderResult => render(<Title {...{...defaultProps, ...props}} />)
 
 describe('is render Title', () => {
     it('Is render Title', () => {
-        setup()
+        container()
 
-        expect(screen.getByText(defaultProps.TITLE)).toBeInTheDocument()
+        const TITLE = screen.getByText(defaultProps.TITLE)
+        expect(TITLE).toBeInTheDocument()
     })
 })

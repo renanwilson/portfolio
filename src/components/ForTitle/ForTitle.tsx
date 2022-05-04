@@ -2,7 +2,7 @@ import React from "react";
 import './style.scss'
 
 export type ForTitleProps = {
-  TITLE: any,
+  TITLE: string,
   left? :boolean,
 };
 

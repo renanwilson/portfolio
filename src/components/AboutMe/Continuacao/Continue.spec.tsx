@@ -4,17 +4,17 @@ import { CONTINUE_MESSAGES } from "./messages";
 import '@testing-library/jest-dom'
 import { render, screen } from "@testing-library/react";
 
-const setup = () => render(<Continue />)
+const container = () => render(<Continue />)
 
 describe('is render Continue', () => {
     it('is render TITLE', () => {
-        setup()
+        container()
 
         const TITLE = (screen.getByText(CONTINUE_MESSAGES.TITLE))
         expect(TITLE).toBeInTheDocument()
     })
     it('is render TEXT', () => {
-        setup()
+        container()
 
         const TEXT = (screen.getByText(CONTINUE_MESSAGES.TEXT))
         expect(TEXT).toBeInTheDocument()

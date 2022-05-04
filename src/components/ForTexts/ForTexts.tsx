@@ -1,7 +1,7 @@
 import "./ForText.style.scss";
 
 export type FortextProps = {
-  Texto: any;
+  Texto: string;
 };
 
 export function Fortext(props: FortextProps) {

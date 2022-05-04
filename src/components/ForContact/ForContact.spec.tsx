@@ -15,20 +15,20 @@ jest.mock("react-icons/bs", () => ({
   BsWhatsapp: jest.fn(() => null),
 }));
 
-const setup = () => render(<ForContact />);
+const container = () => render(<ForContact />);
 
 describe("is render Forcontact icons", () => {
   it("render AiFillLinkedIs", () => {
-    setup();
+    container();
     expect(AiFillLinkedin).toHaveBeenCalled();
   });
   it("render AiOutlineMail", () => {
-    setup();
+    container();
 
     expect(AiOutlineMail).toHaveBeenCalled();
   });
   it("render BsWhatsapp", () => {
-    setup();
+    container();
 
     expect(BsWhatsapp).toHaveBeenCalled();
   });
@@ -36,18 +36,21 @@ describe("is render Forcontact icons", () => {
 
 describe("is render ForContact", () => {
   it("render LinkedIn", () => {
-    setup();
+    container();
 
-    expect(screen.getByText(FOR_CONTACT.LINKEDIN)).toBeInTheDocument();
+    const LINKEDIN = screen.getByText(FOR_CONTACT.LINKEDIN)
+    expect(LINKEDIN).toBeInTheDocument();
   });
   it("render Whatsapp", () => {
-    setup();
+    container();
 
-    expect(screen.getByText(FOR_CONTACT.WHATSAPP)).toBeInTheDocument();
+    const WHATSAPP =  screen.getByText(FOR_CONTACT.WHATSAPP)
+    expect(WHATSAPP).toBeInTheDocument();
   });
   it("render Email", () => {
-    setup();
+    container();
 
-    expect(screen.getByText(FOR_CONTACT.EMAIL)).toBeInTheDocument();
+    const EMAIL = screen.getByText(FOR_CONTACT.EMAIL)
+    expect(EMAIL).toBeInTheDocument();
   });
 });

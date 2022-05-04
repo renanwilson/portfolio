@@ -4,28 +4,28 @@ import { Header } from "./Header";
 import { HEADER_MESSAGES } from "./messages";
 
 
-const setup = ()=> render(<Header />)
+const container = ()=> render(<Header />)
 
 describe('Is render Header', () => {
     it('render img', () => {
-        setup()
+        container()
 
         expect(screen.getByAltText('Está aqui é minha foto')).toHaveAttribute('src')
     })
     it('render about', () => {
-        setup()
+        container()
         
         const SOBRE = (screen.getByText(HEADER_MESSAGES.SOBRE));
         expect(SOBRE).toHaveAttribute('href');
     })
     it('render contacts', ()=> {
-        setup()
+        container()
 
         const contato = (screen.getByText(HEADER_MESSAGES.CONTATOS));
         expect(contato).toHaveAttribute('href');
     })
     it('render git', ()=> {
-        setup()
+        container()
 
         const git = (screen.getByText(HEADER_MESSAGES.GIT));
         expect(git).toHaveAttribute('href');

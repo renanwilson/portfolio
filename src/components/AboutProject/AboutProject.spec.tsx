@@ -4,17 +4,17 @@ import { render, screen } from "@testing-library/react";
 import { AboutProject } from "./AboutProject";
 import { ABOUT_PROJECT_MESSAGES } from "./messages";
 
-const setup = () => render(<AboutProject />)
+const container = () => render(<AboutProject />)
 
 describe('Is render AboutProject', () => {
     it('render TITLE', () =>{
-        setup()
+        container()
 
         const TITLE = (screen.getByText(ABOUT_PROJECT_MESSAGES.TITLE))
         expect(TITLE).toBeInTheDocument()
     })
     it('render TEXT', () => {
-        setup()
+        container()
         
         const TEXT = (screen.getByText(ABOUT_PROJECT_MESSAGES.TEXT))
         expect(TEXT).toBeInTheDocument()

@@ -3,17 +3,17 @@ import { render, screen  } from "@testing-library/react";
 import { Closure } from "./Closure";
 import { CLOSURE_MESSAGES } from "./messages";
 
-const setup = () => render(<Closure />)
+const container = () => render(<Closure />)
 
 describe('Is render Closure', ()=> {
     it('is render title', () => {
-        setup()
+        container()
 
         const TITLE = (screen.getByText(CLOSURE_MESSAGES.TITLE))
         expect(TITLE).toBeInTheDocument()
     })
     it('Is render text', ()=> {
-        setup()
+        container()
 
         const TEXT = (screen.getByText(CLOSURE_MESSAGES.FECHAMENTO))
         expect(TEXT).toBeInTheDocument()
