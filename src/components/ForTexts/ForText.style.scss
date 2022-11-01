@@ -1,11 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 
-.container-ForText{
-    display: flex;
-    padding: 20px;
-    align-items: center;
-    background-color: beige;
-    margin-top: 5%;
-    font-family: 'Montserrat', sans-serif;
-    color: #3da68d;
+.container-ForText {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  background-color: var(--light-background);
+  margin-top: 5%;
+  font-family: "Montserrat", sans-serif;
+  color: var(--light-color);
+}
+.container-ForText-dark {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  background-color: var(--dark-background);
+  margin-top: 5%;
+  font-family: "Montserrat", sans-serif;
+  color: var(--dark-color);
 }

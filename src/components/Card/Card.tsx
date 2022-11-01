@@ -1,4 +1,5 @@
 import React from "react";
+import { useClassNameWithThemeContext } from "../../hocs/WithDarkThemeContext";
 import "./Card.style.scss";
 
 export type CardProps = {
@@ -8,17 +9,24 @@ export type CardProps = {
   CONTACT?: boolean;
 };
 
-
 export function Card(props: CardProps) {
-  return props.CONTACT? (
-    <div className="card-container-contact">
+  const classNameContainer = useClassNameWithThemeContext(
+    "card-container",
+    "card-container-dark"
+  );
+  const containerContact = useClassNameWithThemeContext(
+    "card-container-contact",
+    "card-container-contact-dark"
+  );
+  return props.CONTACT ? (
+    <div className={containerContact}>
       <div>
         <h1>{props.TITLE}</h1>
       </div>
       <h2>{props.ICON}</h2>
     </div>
   ) : (
-    <div className="card-container">
+    <div className={classNameContainer}>
       <div>
         <h1>
           {props.TITLE} {props.ICON}

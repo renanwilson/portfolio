@@ -1,17 +1,37 @@
 import React from "react";
-import './style.scss'
+import { useClassNameWithThemeContext } from "../../hocs/WithDarkThemeContext";
+import "./style.scss";
 
 export type ForTitleProps = {
-  TITLE: string,
-  left? :boolean,
+  TITLE: string;
+  left?: boolean;
 };
 
-export function ForTitle(props: ForTitleProps) {
-  return (
-    <div className={props.left? 'container-forTitleLeft': 'container-forTitle'}>
-    <div className='forTitle'>
-      <h1> {props.TITLE} </h1>
+export function ForTitle({ TITLE, left }: ForTitleProps) {
+  const CONTAINER_LEFT_CLASSNAME = useClassNameWithThemeContext(
+    "container-forTitleLeft",
+    "container-forTitleLeft-dark"
+  );
+  const CONTAINER_CLASSNAME = useClassNameWithThemeContext(
+    "container-forTitle",
+    "container-forTitle-dark"
+  );
+  const TITLE_CLASSNAME = useClassNameWithThemeContext(
+    "forTitle",
+    "forTitle-dark"
+  );
+
+  return left ? (
+    <div className={CONTAINER_LEFT_CLASSNAME}>
+      <div className={TITLE_CLASSNAME}>
+        <h1> {TITLE} </h1>
+      </div>
     </div>
-    </div>  
+  ) : (
+    <div className={CONTAINER_CLASSNAME}>
+      <div className={TITLE_CLASSNAME}>
+        <h1> {TITLE} </h1>
+      </div>
+    </div>
   );
 }

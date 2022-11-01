@@ -1,28 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap");
 
-.container-forTitle{
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    color: burlywood;
-    padding: 20px;
+.container-forTitle {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--light-color);
+  padding: 16px;
+  &-dark {
+    @extend .container-forTitle;
+    color: var(--dark-color);
+  }
 }
-.forTitle{
-    display: flex;
-    width: 50%;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid black;
-    border-radius: 10px;
-    margin-bottom: -10%;
+.forTitle {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--light-color);
+  border-radius: 10px;
+  margin-bottom: -10%;
+  &-dark {
+    @extend .forTitle;
+    border: 2px solid var(--dark-color);
+  }
+}
 
-}
-.container-forTitleLeft{
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: burlywood;
-    padding: 20px;
+.container-forTitleLeft {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--light-color);
+  padding: 20px;
+  &-dark {
+    @extend .container-forTitleLeft;
+    color: var(--dark-color);
+  }
 }

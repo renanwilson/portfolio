@@ -1,5 +1,5 @@
-import './allStyle.scss'
-import { ForRotas } from './routes/Routes';
+import "./allStyle.scss";
+import { ForRotas } from "./routes/Routes";
 
 function App() {
   return (

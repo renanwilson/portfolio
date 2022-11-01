@@ -1,11 +1,22 @@
 import React from "react";
 import { EXPLICATION_MESSAGES } from "./messages";
 import "./explication.style.scss";
+import { useClassNameWithThemeContext } from "../../../hocs/WithDarkThemeContext";
 
 export function Explication() {
   return (
-    <div className="explication">
-      <div className="container-explication">
+    <div
+      className={useClassNameWithThemeContext(
+        "explication",
+        "explication-dark"
+      )}
+    >
+      <div
+        className={useClassNameWithThemeContext(
+          "container-explication",
+          "container-explication-dark"
+        )}
+      >
         <h1> {EXPLICATION_MESSAGES.SOBRE}</h1>
       </div>
     </div>

@@ -1,0 +1,6 @@
+.container-about {
+  background-color: var(--light-backgroudColor);
+  &-dark {
+    background-color: var(--dark-backgroudColor);
+  }
+}

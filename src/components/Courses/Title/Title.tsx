@@ -1,13 +1,18 @@
 import React from "react";
-import './Title.style.scss'
+import { useClassNameWithThemeContext } from "../../../hocs/WithDarkThemeContext";
+import "./Title.style.scss";
 export type TitleProps = {
-    TITLE: string,
-}
+  TITLE: string;
+};
 
 export function Title(props: TitleProps) {
-    return(
-    <div className="title-container" >
-        <h1>{props.TITLE}</h1>
+  const CONTAINER_CLASSNAME = useClassNameWithThemeContext(
+    "title-container",
+    "title-container-dark"
+  );
+  return (
+    <div className={CONTAINER_CLASSNAME}>
+      <h1>{props.TITLE}</h1>
     </div>
-    )
+  );
 }

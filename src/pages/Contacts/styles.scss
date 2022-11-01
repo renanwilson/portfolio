@@ -1,0 +1,6 @@
+.contact-container {
+  background-color: var(--light-backgroudColor);
+  &-dark {
+    background-color: var(--dark-backgroudColor);
+  }
+}
