@@ -6,6 +6,7 @@ import React, {
   useContext,
   useState,
 } from "react";
+import DarkModeToggle from "react-dark-mode-toggle";
 
 type WithDarkThemeContextProps = {
   setDarkTheme: Dispatch<SetStateAction<string>>;
@@ -41,8 +42,10 @@ export function WithDarkThemeProvider({
     </WithDarkThemeContext.Provider>
   );
 }
+export const useDarkThemeContext = () => useContext(WithDarkThemeContext);
+
 export const useWithDarkThemeContext = () => {
-  const { darkTheme, setDarkTheme } = useContext(WithDarkThemeContext);
+  const { darkTheme, setDarkTheme } = useDarkThemeContext();
 
   function changeTheme() {
     if (darkTheme === "dark") {
@@ -60,7 +63,15 @@ export const useWithDarkThemeContext = () => {
   };
 };
 export const useClassNameWithThemeContext = (l: string, d: string) => {
-  const { darkTheme } = useContext(WithDarkThemeContext);
+  const { darkTheme } = useDarkThemeContext();
 
   return darkTheme === "light" ? l : d;
+};
+
+export const DarkToggleTheme = () => {
+  const { darkTheme } = useDarkThemeContext();
+  const { changeTheme } = useWithDarkThemeContext();
+  return (
+    <DarkModeToggle onChange={changeTheme} checked={darkTheme === "dark"} />
+  );
 };

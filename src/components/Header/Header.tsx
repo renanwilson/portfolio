@@ -2,16 +2,13 @@ import { Explication } from "./Explicaton/Explication";
 import { HEADER_MESSAGES } from "./messages";
 import "./style.scss";
 import eu from "./utils/img/eu.jpg";
+
 import {
+  DarkToggleTheme,
   useClassNameWithThemeContext,
-  useWithDarkThemeContext,
 } from "../../hocs/WithDarkThemeContext";
 
 export function Header() {
-  const { changeTheme } = useWithDarkThemeContext();
-  const DarkTheme = () => {
-    changeTheme();
-  };
   return (
     <>
       <div
@@ -20,7 +17,7 @@ export function Header() {
           "container-header-dark"
         )}
       >
-        <button onClick={DarkTheme}></button>
+        <DarkToggleTheme />
         <a href="/">
           <img src={eu} alt="Está aqui é minha foto" />
         </a>
