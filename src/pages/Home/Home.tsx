@@ -2,7 +2,7 @@ import React from "react";
 import { AboutProject } from "../../components/AboutProject/AboutProject";
 import { Courses } from "../../components/Courses/Courses";
 import { Header } from "../../components/Header/Header";
-import { useClassNameWithThemeContext } from "../../hocs/WithDarkThemeContext";
+import { useClassNameWithThemeContext } from "../../context/DarkThemeContext";
 import "./styles.scss";
 
 export function Home() {

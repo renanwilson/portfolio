@@ -1,4 +1,4 @@
-import { useClassNameWithThemeContext } from "../../hocs/WithDarkThemeContext";
+import { useClassNameWithThemeContext } from "../../context/DarkThemeContext";
 import "./ForText.style.scss";
 
 export type FortextProps = {

@@ -3,7 +3,7 @@ import { Header } from "../../components/Header/Header";
 import { Continue } from "../../components/AboutMe/Continuacao/Continue";
 import { Intro } from "../../components/AboutMe/introducao/Intro";
 import { Closure } from "../../components/AboutMe/Fechamento/Closure";
-import { useClassNameWithThemeContext } from "../../hocs/WithDarkThemeContext";
+import { useClassNameWithThemeContext } from "../../context/DarkThemeContext";
 import "./styles.scss";
 
 export function Sobre() {

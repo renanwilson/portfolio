@@ -3,7 +3,7 @@ import { HEADER_MESSAGES } from "./messages";
 import "./style.scss";
 import eu from "./utils/img/eu.jpg";
 
-import { useClassNameWithThemeContext } from "../../hocs/WithDarkThemeContext";
+import { useClassNameWithThemeContext } from "../../context/DarkThemeContext";
 import { DarkToggleTheme } from "../DarkModeToggle/DarkModeToggle";
 
 export function Header() {

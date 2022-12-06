@@ -1,6 +1,6 @@
 import { ForContact } from "../../components/ForContact/ForContact";
 import { Header } from "../../components/Header/Header";
-import { useClassNameWithThemeContext } from "../../hocs/WithDarkThemeContext";
+import { useClassNameWithThemeContext } from "../../context/DarkThemeContext";
 import "./styles.scss";
 
 export function Contact() {

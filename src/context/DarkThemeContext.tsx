@@ -6,7 +6,6 @@ import React, {
   useContext,
   useState,
 } from "react";
-import DarkModeToggle from "react-dark-mode-toggle";
 
 type WithDarkThemeContextProps = {
   setDarkTheme: Dispatch<SetStateAction<string>>;

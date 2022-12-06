@@ -1,7 +1,7 @@
 import React from "react";
 import { EXPLICATION_MESSAGES } from "./messages";
 import "./explication.style.scss";
-import { useClassNameWithThemeContext } from "../../../hocs/WithDarkThemeContext";
+import { useClassNameWithThemeContext } from "../../../context/DarkThemeContext";
 
 export function Explication() {
   return (

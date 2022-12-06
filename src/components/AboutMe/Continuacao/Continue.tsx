@@ -4,10 +4,10 @@ import { ForTitle } from "../../ForTitle/ForTitle";
 import { CONTINUE_MESSAGES } from "./messages";
 
 export function Continue() {
-    return(
+  return (
     <>
-    <ForTitle TITLE={CONTINUE_MESSAGES.TITLE} left/>
-    <Fortext Texto={CONTINUE_MESSAGES.TEXT} />
+      <ForTitle TITLE={CONTINUE_MESSAGES.TITLE} left />
+      <Fortext Texto={CONTINUE_MESSAGES.TEXT} />
     </>
-    );
+  );
 }

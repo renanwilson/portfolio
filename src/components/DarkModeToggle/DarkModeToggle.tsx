@@ -2,7 +2,7 @@ import DarkModeToggle from "react-dark-mode-toggle";
 import {
   useDarkThemeContext,
   useWithDarkThemeContext,
-} from "../../hocs/WithDarkThemeContext";
+} from "../../context/DarkThemeContext";
 
 export const DarkToggleTheme = () => {
   const { darkTheme } = useDarkThemeContext();

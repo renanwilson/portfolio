@@ -1,5 +1,5 @@
 import React from "react";
-import { useClassNameWithThemeContext } from "../../hocs/WithDarkThemeContext";
+import { useClassNameWithThemeContext } from "../../context/DarkThemeContext";
 import "./Card.style.scss";
 
 export type CardProps = {

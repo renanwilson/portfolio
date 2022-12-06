@@ -1,5 +1,5 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import { WithDarkThemeProvider } from "../hocs/WithDarkThemeContext";
+import { WithDarkThemeProvider } from "../context/DarkThemeContext";
 import { Contact } from "../pages/Contacts/Contact";
 import { Home } from "../pages/Home/Home";
 
