@@ -1,6 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+import "jest-canvas-mock";
 import { ForContact } from "./ForContact";
 import { FOR_CONTACT } from "./messages";
 import { AiFillLinkedin } from "react-icons/ai";
@@ -38,19 +39,19 @@ describe("is render ForContact", () => {
   it("render LinkedIn", () => {
     container();
 
-    const LINKEDIN = screen.getByText(FOR_CONTACT.LINKEDIN)
+    const LINKEDIN = screen.getByText(FOR_CONTACT.LINKEDIN);
     expect(LINKEDIN).toBeInTheDocument();
   });
   it("render Whatsapp", () => {
     container();
 
-    const WHATSAPP =  screen.getByText(FOR_CONTACT.WHATSAPP)
+    const WHATSAPP = screen.getByText(FOR_CONTACT.WHATSAPP);
     expect(WHATSAPP).toBeInTheDocument();
   });
   it("render Email", () => {
     container();
 
-    const EMAIL = screen.getByText(FOR_CONTACT.EMAIL)
+    const EMAIL = screen.getByText(FOR_CONTACT.EMAIL);
     expect(EMAIL).toBeInTheDocument();
   });
 });

@@ -1,5 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
+import "jest-canvas-mock";
 import { render, screen } from "@testing-library/react";
 import { Courses } from "./Courses";
 import { COURSES_MESSAGES } from "./messages";
@@ -59,14 +60,14 @@ describe("Is render Courses", () => {
   it("is render title", () => {
     container();
 
-    const TITLE = screen.getByText(COURSES_MESSAGES.TITLE)
+    const TITLE = screen.getByText(COURSES_MESSAGES.TITLE);
     expect(TITLE).toBeInTheDocument();
   });
 
   it("is render first title", () => {
     container();
 
-    const FIRST_TITLE = screen.getByText(COURSES_MESSAGES.FIRST.TITLE)
+    const FIRST_TITLE = screen.getByText(COURSES_MESSAGES.FIRST.TITLE);
 
     expect(FIRST_TITLE).toBeInTheDocument();
   });
@@ -74,57 +75,57 @@ describe("Is render Courses", () => {
   it("Is render first text", () => {
     container();
 
-    const FIRST_TEXT = screen.getByText(COURSES_MESSAGES.FIRST.TEXT)
+    const FIRST_TEXT = screen.getByText(COURSES_MESSAGES.FIRST.TEXT);
     expect(FIRST_TEXT).toBeInTheDocument();
   });
 
   it("Is render second title", () => {
     container();
 
-    const SECOND_TITLE =  screen.getByText(COURSES_MESSAGES.SECOND.TITLE)
+    const SECOND_TITLE = screen.getByText(COURSES_MESSAGES.SECOND.TITLE);
     expect(SECOND_TITLE).toBeInTheDocument();
   });
   it("Is render second text", () => {
     container();
 
-    const SECOND_TEXT =  screen.getByText(COURSES_MESSAGES.SECOND.TEXT)
+    const SECOND_TEXT = screen.getByText(COURSES_MESSAGES.SECOND.TEXT);
     expect(SECOND_TEXT).toBeInTheDocument();
   });
 
   it("is render thirt title", () => {
     container();
 
-    const THIRD_TITLE = screen.getByText(COURSES_MESSAGES.THIRD.TITLE)
+    const THIRD_TITLE = screen.getByText(COURSES_MESSAGES.THIRD.TITLE);
     expect(THIRD_TITLE).toBeInTheDocument();
   });
   it("Is render third text", () => {
     container();
 
-    const THIRD_TEXT = screen.getByText(COURSES_MESSAGES.THIRD.TEXT)
+    const THIRD_TEXT = screen.getByText(COURSES_MESSAGES.THIRD.TEXT);
     expect(THIRD_TEXT).toBeInTheDocument();
   });
   it("Is render fourth title", () => {
     container();
 
-    const FOURTH_TITLE = screen.getByText(COURSES_MESSAGES.FOURTH.TITLE)
+    const FOURTH_TITLE = screen.getByText(COURSES_MESSAGES.FOURTH.TITLE);
     expect(FOURTH_TITLE).toBeInTheDocument();
   });
   it("Is render fourth text", () => {
     container();
 
-    const FOURTH_TEXT = screen.getByText(COURSES_MESSAGES.FOURTH.TEXT)
+    const FOURTH_TEXT = screen.getByText(COURSES_MESSAGES.FOURTH.TEXT);
     expect(FOURTH_TEXT).toBeInTheDocument();
   });
   it("Is render fifth title", () => {
     container();
 
-    const FIFTH_TITLE = screen.getByText(COURSES_MESSAGES.FIFTH.TITLE)
+    const FIFTH_TITLE = screen.getByText(COURSES_MESSAGES.FIFTH.TITLE);
     expect(FIFTH_TITLE).toBeInTheDocument();
   });
   it("Is render fifth text", () => {
     container();
 
-    const FIFTH_TEXT =  screen.getByText(COURSES_MESSAGES.FIFTH.TEXT)
+    const FIFTH_TEXT = screen.getByText(COURSES_MESSAGES.FIFTH.TEXT);
     expect(FIFTH_TEXT).toBeInTheDocument();
   });
 });

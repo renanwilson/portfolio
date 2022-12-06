@@ -35,9 +35,7 @@ export function WithDarkThemeProvider({
   });
   console.log(darkTheme);
   return (
-    <WithDarkThemeContext.Provider
-      value={{ setDarkTheme: setDarkTheme, darkTheme: darkTheme }}
-    >
+    <WithDarkThemeContext.Provider value={{ setDarkTheme, darkTheme }}>
       {children}
     </WithDarkThemeContext.Provider>
   );
@@ -66,12 +64,4 @@ export const useClassNameWithThemeContext = (l: string, d: string) => {
   const { darkTheme } = useDarkThemeContext();
 
   return darkTheme === "light" ? l : d;
-};
-
-export const DarkToggleTheme = () => {
-  const { darkTheme } = useDarkThemeContext();
-  const { changeTheme } = useWithDarkThemeContext();
-  return (
-    <DarkModeToggle onChange={changeTheme} checked={darkTheme === "dark"} />
-  );
 };

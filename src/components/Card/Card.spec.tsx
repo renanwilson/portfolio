@@ -1,6 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen, RenderResult } from "@testing-library/react";
 import { Card, CardProps } from "./Card";
+import "jest-canvas-mock";
 
 const defaultProps: CardProps = {
   TITLE: "Titulo",
@@ -14,7 +15,7 @@ const container = (props?: CardProps): RenderResult =>
 describe("Is render Card", () => {
   it("Is render Title", () => {
     container();
-    
+
     const TITLE = screen.getByText(defaultProps.TITLE);
     expect(TITLE).toBeInTheDocument();
   });

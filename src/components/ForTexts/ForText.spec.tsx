@@ -1,19 +1,21 @@
 import React from "react";
-import '@testing-library/jest-dom'
+import "@testing-library/jest-dom";
 import { Fortext, FortextProps } from "./ForTexts";
 import { render, screen, RenderResult } from "@testing-library/react";
+import "jest-canvas-mock";
 
 const defaultProps: FortextProps = {
-    Texto: 'Teste'
-}
+  Texto: "Teste",
+};
 
-const container = (props?: FortextProps): RenderResult => render(<Fortext {...{...defaultProps, ...props}} />)
+const container = (props?: FortextProps): RenderResult =>
+  render(<Fortext {...{ ...defaultProps, ...props }} />);
 
-describe('Is render ForText', () => {
-    it('render text', () => {
+describe("Is render ForText", () => {
+  it("render text", () => {
     container();
 
-    const TEXT = screen.getByText(defaultProps.Texto)
-    expect(TEXT).toBeInTheDocument()
-})
-})
+    const TEXT = screen.getByText(defaultProps.Texto);
+    expect(TEXT).toBeInTheDocument();
+  });
+});
