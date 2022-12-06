@@ -4,7 +4,7 @@ import { useClassNameWithThemeContext } from "../../context/DarkThemeContext";
 import "./styles.scss";
 import { AboutMe } from "../../components/AboutMe/AboutMe";
 
-export function Sobre() {
+export function About() {
   const CONTAINER_ABOUT = useClassNameWithThemeContext(
     "container-about",
     "container-about-dark"

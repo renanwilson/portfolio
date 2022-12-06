@@ -1,6 +1,6 @@
 import { Card } from "../Card/Card";
 import { FOR_CONTACT } from "./messages";
-import "./ForContact.style.scss";
+import "./Contacts.style.scss";
 import { AiFillLinkedin } from "react-icons/ai";
 import { BsWhatsapp } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
@@ -19,7 +19,7 @@ const LinkForEmail = (
 
 export function ForContact() {
   return (
-    <div className="forContact-container">
+    <div className="Contacts-container">
       <Card TITLE={LinkForLinkedIn} ICON={<AiFillLinkedin />} CONTACT />
       <Card TITLE={LinkForWhatsapp} ICON={<BsWhatsapp />} CONTACT />
       <Card TITLE={LinkForEmail} ICON={<AiOutlineMail />} CONTACT />

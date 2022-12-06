@@ -10,6 +10,7 @@ export function Title(props: TitleProps) {
     "title-container",
     "title-container-dark"
   );
+
   return (
     <div className={CONTAINER_CLASSNAME}>
       <h1>{props.TITLE}</h1>

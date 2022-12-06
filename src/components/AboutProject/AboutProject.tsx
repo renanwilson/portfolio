@@ -1,13 +1,14 @@
 import React from "react";
-import { Fortext } from "../ForTexts/ForTexts";
-import { ForTitle } from "../ForTitle/ForTitle";
+import { TextsContainer } from "../TextsContainers/TextsContainer";
+import { TitlesContainer } from "../TitlesContainer/TitlesContainer";
 import { ABOUT_PROJECT_MESSAGES } from "./messages";
-export function AboutProject(){
 
-    return(
-        <>
-        <ForTitle TITLE={ABOUT_PROJECT_MESSAGES.TITLE}/>
-        <Fortext Texto={ABOUT_PROJECT_MESSAGES.TEXT} />
-        </>
-    )
+export function AboutProject() {
+  return (
+    <>
+      <TitlesContainer Title={ABOUT_PROJECT_MESSAGES.TITLE} />
+      <TextsContainer Text={ABOUT_PROJECT_MESSAGES.TEXT} />
+    </>
+  );
 }
+  
