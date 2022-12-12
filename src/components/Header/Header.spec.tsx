@@ -3,6 +3,11 @@ import "@testing-library/jest-dom";
 import "jest-canvas-mock";
 import { Header } from "./Header";
 import { HEADER_MESSAGES } from "./messages";
+import { DarkToggleTheme } from "../DarkModeToggle/DarkModeToggle";
+
+jest.mock("../DarkModeToggle/DarkModeToggle", () => ({
+  DarkToggleTheme: jest.fn(() => null),
+}));
 
 const container = () => render(<Header />);
 
@@ -31,5 +36,10 @@ describe("Is render Header", () => {
 
     const git = screen.getByText(HEADER_MESSAGES.GIT);
     expect(git).toHaveAttribute("href");
+  });
+  it("render DarkToggleTheme", () => {
+    container();
+
+    expect(DarkToggleTheme).toHaveBeenCalled();
   });
 });
